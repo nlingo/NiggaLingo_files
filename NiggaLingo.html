@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://niggalingo.fun/ -->
+<html lang="en"><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js" id="eppiocemhmnlbhjplcgkofciiegomcon"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiggaLingo</title>
+    <link rel="stylesheet" href="./NiggaLingo_files/animate.min.css">
+    <link href="./NiggaLingo_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./NiggaLingo_files/all.min.css">
+	<link rel="icon" href="./NiggaLingo_files/dou.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+            color: #4A4A4A;
+        }
+
+       nav .buy-link {
+    margin-left: auto;
+}
+
+@media (max-width: 600px) {
+    nav .buy-link a {
+        font-size: 1rem;
+    }
+}
+
+  header {
+            background-color: #58CC02;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav .logo h1 {
+            color: white;
+            font-size: 1.8rem;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .screen {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #fff;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .screen .owl {
+            height: 200px;
+            width: auto;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        .screen h2 {
+            font-size: 2.5rem;
+            margin-top: 0;
+            color: #4A4A4A;
+        }
+
+        .screen button {
+            background-color: #58CC02;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .screen button:hover {
+            background-color: #46A700;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #F3F3F3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 10px;
+            z-index: 1000;
+        }
+
+        .progress {
+            width: 0;
+            height: 100%;
+            background-color: #58CC02;
+            transition: width 0.4s ease;
+        }
+
+        .speech-bubble {
+            background: #58CC02;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            max-width: 300px;
+            margin: 0 auto 20px;
+        }
+
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-top-color: #58CC02;
+            border-bottom: 0;
+            margin-left: -20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        ul li {
+            margin: 10px 0;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li input {
+            margin-right: 10px;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #58CC02;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        ul li input:checked {
+            background-color: #58CC02;
+        }
+
+        ul li label {
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            .screen h2 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            nav .logo h1 {
+                font-size: 1.5rem;
+            }
+
+            .screen button {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+
+            .speech-bubble {
+                font-size: 0.9rem;
+                padding: 15px;
+            }
+
+            .speech-bubble::after {
+                bottom: -15px;
+                border-width: 15px;
+            }
+        }
+    </style>
+<script bis_use="true" type="text/javascript" charset="utf-8" data-bis-config="[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.net/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,&quot;challenges.cloudflare.com/&quot;,&quot;ogs.google.com&quot;]" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executers/vi-tr.js"></script></head>
+<body __processed_04299408-4f07-4eb4-94e4-291dd1d1daea__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZGlzYWJsZWQiLCJJTlNUQUdSQU0iOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZGlzYWJsZWQiLCJDT05GSUciOiJkaXNhYmxlZCJ9LCJ2ZXJzaW9uIjoiMi4wLjE2Iiwic2NvcmUiOjIwMDE2MH1d">
+    <header id="header">
+    <nav>
+        <div class="logo" bis_skin_checked="1">
+            <a href="https://niggalingo.fun/" style="text-decoration: none; color: inherit;"><h1>Niggalingo</h1></a>
+        </div>
+        <div class="buy-link" bis_skin_checked="1">
+            <a href="https://pump.fun/CPjMLShDsi19TSHGHx6Ae1MQV7TcPDjtz35xVGS1pump" style="text-decoration: none; color: inherit; font-size: 1.5rem;">$Buy</a>
+        </div>
+    </nav>
+</header>
+    <main>
+        <section class="screen animate__animated animate__fadeInUp" id="main-screen">
+            <img src="./NiggaLingo_files/dou.png" alt="Owl" class="owl">
+            <h2>Welcome to Niggalingo!</h2>
+            <button onclick="showScreen(&#39;welcome-screen&#39;)" fdprocessedid="o150tr">Get Started</button>
+        </section>
+        <section class="screen hidden animate__animated animate__fadeInUp" id="welcome-screen">
+            <img src="./NiggaLingo_files/dou.png" alt="Owl" class="owl">
+            <h2>Hi, I am NiggaLingo!, I love Fried Chicken!, Im also legally obligated to say that I am Registered Sex Offender ,but thats not imporant!</h2>
+            <button onclick="showScreen(&#39;question-screen&#39;)">Continue</button>
+        </section>
+        <section class="screen hidden animate__animated animate__fadeInUp" id="question-screen">
+            <div class="speech-bubble" bis_skin_checked="1">
+                How did you hear about NiggaLingo?
+            </div>
+            <img src="./NiggaLingo_files/dou.png" alt="Owl" class="owl">
+            <ul>
+                <li><input type="radio" name="source" id="source1"><label for="source1">PumpFun</label></li>
+                <li><input type="radio" name="source" id="source2"><label for="source2">Dexscreener</label></li>
+                <li><input type="radio" name="source" id="source3"><label for="source3">Social media</label></li>
+                <li><input type="radio" name="source" id="source4"><label for="source4">I have three kids in my basement</label></li>
+                <li><input type="radio" name="source" id="source4"><label for="source4">Nigger</label></li>
+            </ul>
+            <button onclick="showScreen(&#39;reason-screen&#39;)">Continue</button>
+        </section>
+        <section class="screen hidden animate__animated animate__fadeInUp" id="reason-screen">
+            <div class="speech-bubble" bis_skin_checked="1">
+                Why do you want to learn?
+            </div>
+            <img src="./NiggaLingo_files/dou.png" alt="Owl" class="owl">
+            <ul>
+                <li><input type="radio" name="reason" id="reason1"><label for="reason1">Career</label></li>
+                <li><input type="radio" name="reason" id="reason2"><label for="reason2">The FBI is looking for me and I have to move to another country</label></li>
+                <li><input type="radio" name="reason" id="reason3"><label for="reason3">Culture</label></li>
+                <li><input type="radio" name="source" id="reason5"><label for="source4">Nigger</label></li>
+                <li><input type="radio" name="reason" id="reason4"><label for="reason4">Vacation</label></li>
+            </ul>
+            <button onclick="showScreen(&#39;knowledge-screen&#39;)">Continue</button>
+        </section>
+        <section class="screen hidden animate__animated animate__fadeInUp" id="knowledge-screen">
+            <div class="speech-bubble" bis_skin_checked="1">
+                How much spanish do you know?
+            </div>
+            <img src="./NiggaLingo_files/dou.png" alt="Owl" class="owl">
+            <ul>
+                <li><input type="radio" name="knowledge" id="knowledge1"><label for="knowledge1">Basic</label></li>
+                <li><input type="radio" name="knowledge" id="knowledge2"><label for="knowledge2">George Floyd</label></li>
+                <li><input type="radio" name="knowledge" id="knowledge3"><label for="knowledge3">Advanced</label></li>
+            </ul>
+            <button onclick="showScreen(&#39;learning-screen&#39;)">Continue</button>
+        </section>
+        <section class="screen hidden animate__animated animate__fadeInUp" id="learning-screen">
+            <div class="speech-bubble" bis_skin_checked="1">
+                You will learn a lot!
+            </div>
+            <p>We will teach you new words, grammar, and much more.</p>
+            <img src="./NiggaLingo_files/dou.png" alt="Owl" class="owl">
+            <button onclick="showScreen(&#39;goal-screen&#39;)">Continue</button>
+        </section>
+        <section class="screen hidden animate__animated animate__fadeInUp" id="goal-screen">
+            <div class="speech-bubble" bis_skin_checked="1">
+                Set your daily goal
+            </div>
+            <img src="./NiggaLingo_files/dou.png" alt="Owl" class="owl">
+            <ul>
+                <li><input type="radio" name="goal" id="goal1"><label for="goal1">1 minutes</label></li>
+                <li><input type="radio" name="goal" id="goal2"><label for="goal2">1 second</label></li>
+                <li><input type="radio" name="goal" id="goal3"><label for="goal3">1 Hour</label></li>
+                <li><input type="radio" name="goal" id="goal4"><label for="goal4">I dont want to learn</label></li>
+            </ul>
+            <button onclick="showScreen(&#39;final-screen&#39;)">Continue</button>
+        </section>
+        <section class="screen hidden animate__animated animate__fadeInUp" id="final-screen">
+            <h2>You're all set!</h2>
+            <p>Welcome to NiggaLingo. The best platform to learn languages in all the galaxy, (Duolingo is just a copy of me)</p>
+            <img src="./NiggaLingo_files/dou.png" alt="Owl" class="owl">
+            <button onclick="goToPage(&#39;https://niggalingo.fun/game&#39;)">Continue</button>
+        </section>
+    </main>
+    <script>
+        function showScreen(screenId) {
+            const screens = document.querySelectorAll('.screen');
+            screens.forEach(screen => screen.classList.add('hidden'));
+            document.getElementById(screenId).classList.remove('hidden');
+        }
+
+        function goToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+
+
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
